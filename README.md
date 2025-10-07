@@ -1,16 +1,25 @@
-# Explain My Code
+# 🚀 Code Explainer - AI-Powered Code Analysis Tool
 
-A code analysis tool that helps you understand what your code does and how it works by providing detailed explanations of its structure and functionality.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
+[![React](https://img.shields.io/badge/React-18.2.0-61dafb)](https://reactjs.org/)
+[![Flask](https://img.shields.io/badge/Flask-2.2.3-green)](https://flask.palletsprojects.com/)
 
-## Features
+An intelligent code analysis tool that helps developers understand code functionality through detailed explanations. Supports both traditional rule-based analysis and cutting-edge AI/NLP-based analysis using transformer models.
 
-- **Code Analysis**: Get detailed explanations of your code's structure, functions, classes, and variables
-- **Multi-language Support**: Currently supports JavaScript, Python, Java, and C++
-- **Dual Analysis Methods**:
-  - **Rule-based Analysis**: Pattern recognition through syntax parsing
-  - **NLP-based Analysis**: Machine learning models to explain code (NEW!)
-- **User-friendly Interface**: Clean, modern UI with syntax highlighting
-- **Example Code**: Includes examples for all supported languages
+![Code Explainer Demo](https://via.placeholder.com/800x400?text=Code+Explainer+Demo)
+
+## ✨ Features
+
+- 🎯 **Intelligent Code Analysis**: Get detailed explanations of code structure, functions, classes, and variables
+- 🌐 **Multi-language Support**: JavaScript, Python, Java, and C++
+- 🤖 **Dual Analysis Methods**:
+  - **Rule-based Analysis**: Fast pattern recognition through syntax parsing
+  - **NLP-based Analysis**: AI-powered explanations using transformer models (CodeBERT, CodeGen, Gemini)
+- 🎨 **Modern UI**: Clean interface with syntax highlighting powered by CodeMirror
+- 📚 **Example Code Library**: Pre-loaded examples for all supported languages
+- 💡 **Real-time Analysis**: Instant code explanations as you type
+- 🔍 **Detailed Insights**: Function signatures, class hierarchies, and code complexity metrics
 
 ## How It Works
 
@@ -49,84 +58,237 @@ The project consists of two main components:
 - Examples for each supported language
 - Selection between rule-based and NLP analysis (NEW!)
 
-## Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
 
-- Python 3.7+
-- Node.js 14+
-- npm or yarn
-- PyTorch and Transformers libraries (for NLP analysis)
+Before you begin, ensure you have the following installed:
 
-### Installation and Setup
+- **Python 3.8+** - [Download Python](https://www.python.org/downloads/)
+- **Node.js 14+** and **npm** - [Download Node.js](https://nodejs.org/)
+- **Git** - [Download Git](https://git-scm.com/)
 
-#### Backend
+### Installation
 
-1. Navigate to the backend directory:
+#### 1️⃣ Clone the Repository
+
 ```bash
+git clone https://github.com/piyushrajyadav/code-explainer.git
+cd code-explainer
+```
+
+#### 2️⃣ Backend Setup
+
+```bash
+# Navigate to backend directory
 cd backend
-```
 
-2. Install dependencies:
-```bash
+# Create virtual environment (recommended)
+python -m venv venv
+
+# Activate virtual environment
+# Windows:
+venv\Scripts\activate
+# macOS/Linux:
+source venv/bin/activate
+
+# Install dependencies
 pip install -r requirements.txt
-```
 
-3. Set up the NLP model (optional, but required for NLP-based analysis):
-```bash
-python app/nlp/setup.py
-```
+# Create .env file (optional)
+echo "FLASK_ENV=development" > .env
+echo "FLASK_APP=run.py" >> .env
+echo "PORT=8000" >> .env
 
-4. Run the Flask server:
-```bash
+# Run the Flask server
 python run.py
 ```
 
-The backend will start on http://localhost:8000.
+✅ Backend will start on **http://localhost:8000**
 
-#### Frontend
+#### 3️⃣ Frontend Setup
 
-1. Navigate to the frontend directory:
+Open a **new terminal window**:
+
 ```bash
+# Navigate to frontend directory
 cd frontend
-```
 
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
-```
 
-3. Start the development server:
-```bash
+# Start the development server
 npm start
 ```
 
-The frontend will start on http://localhost:3000 and automatically connect to the backend API.
+✅ Frontend will start on **http://localhost:3000**
 
-## Usage
+### 🎉 You're Ready!
 
-1. Select your programming language from the dropdown
-2. Choose an analysis method (Rule-based or NLP-based)
-3. Paste your code in the editor or use one of the provided examples
-4. Click "Analyze Code"
-5. View the detailed explanation of your code's structure and functionality
+Open your browser and navigate to `http://localhost:3000` to start analyzing code!
 
-## NLP Model Training (Advanced)
+## 📖 Usage
 
-For advanced users who want to train or fine-tune the NLP models:
+### Basic Usage
 
-```bash
-cd backend
-python app/nlp/training.py --train-data path/to/data.json --output-dir ./trained_model
+1. **Select Language**: Choose your programming language (JavaScript, Python, Java, C++)
+2. **Choose Analysis Method**:
+   - **Rule-based**: Fast, offline analysis using pattern matching
+   - **NLP-based**: AI-powered analysis using transformer models
+3. **Select AI Model** (for NLP-based):
+   - **Google Gemini Flash**: Fast and efficient (requires API key)
+   - **CodeGen 350M**: Lightweight local model
+   - **CodeBERT**: Base code understanding model
+4. **Enter Code**: Paste your code or load an example
+5. **Analyze**: Click "Analyze Code" button
+6. **Review**: Get detailed explanations, structure analysis, and suggestions
+
+### Example Workflow
+
+```javascript
+// Example: Analyzing a React Component
+function TodoApp() {
+  const [todos, setTodos] = useState([]);
+  // ... rest of the code
+}
 ```
 
-## License
+**Result**: Detailed explanation of component structure, state management, and functionality.
 
-MIT
+## 🏗️ Project Structure
 
-## Acknowledgments
+```
+code-explainer/
+├── backend/                  # Flask API Backend
+│   ├── app/
+│   │   ├── analyzers/       # Language-specific analyzers
+│   │   │   ├── python_analyzer.py
+│   │   │   ├── js_analyzer.py
+│   │   │   ├── java_analyzer.py
+│   │   │   └── cpp_analyzer.py
+│   │   ├── nlp/             # NLP models and API
+│   │   │   ├── model.py     # Model wrapper
+│   │   │   ├── api.py       # NLP API endpoints
+│   │   │   ├── gemini_analyzer.py
+│   │   │   └── saved_models/ # Pre-trained models
+│   │   └── main.py          # Flask routes
+│   ├── requirements.txt
+│   └── run.py               # Application entry point
+├── frontend/                 # React Frontend
+│   ├── public/
+│   ├── src/
+│   │   ├── components/      # React components
+│   │   │   ├── CodeAnalyzer.js
+│   │   │   ├── CodeExplanation.js
+│   │   │   ├── Header.js
+│   │   │   └── Footer.js
+│   │   ├── App.js
+│   │   └── index.js
+│   └── package.json
+├── .gitignore
+└── README.md
+```
 
-- React and Material-UI for the frontend framework
-- CodeMirror for the code editor
-- Flask for the backend API
-- Hugging Face Transformers for NLP models # code-explainer
+## 🤖 AI Models
+
+### Available Models
+
+| Model | Type | Size | Speed | Quality | Local/API |
+|-------|------|------|-------|---------|-----------|
+| **Google Gemini Flash** | LLM | - | ⚡ Very Fast | ⭐⭐⭐⭐⭐ | API |
+| **CodeGen 350M** | Code Gen | 350M | 🚀 Fast | ⭐⭐⭐⭐ | Local |
+| **CodeBERT** | Code Understanding | 125M | 🚀 Fast | ⭐⭐⭐ | Local |
+
+### Using Gemini API (Optional)
+
+To use Google Gemini for enhanced explanations:
+
+1. Get an API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+2. Create `.env` file in backend directory:
+   ```bash
+   GEMINI_API_KEY=your_api_key_here
+   ```
+3. Select "Google Gemini Flash" from the model dropdown
+
+## 🛠️ Development
+
+### Running Tests
+
+```bash
+# Backend tests
+cd backend
+pytest
+
+# Frontend tests
+cd frontend
+npm test
+```
+
+### Building for Production
+
+#### Backend
+```bash
+cd backend
+pip install gunicorn
+gunicorn -w 4 -b 0.0.0.0:8000 run:app
+```
+
+#### Frontend
+```bash
+cd frontend
+npm run build
+# Serve build folder with your preferred static file server
+```
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**Issue**: Backend won't start
+- **Solution**: Make sure Python 3.8+ is installed and virtual environment is activated
+
+**Issue**: Frontend can't connect to backend
+- **Solution**: Verify backend is running on port 8000 and CORS is enabled
+
+**Issue**: Model download fails
+- **Solution**: Check internet connection and ensure sufficient disk space (~2GB for models)
+
+**Issue**: Port already in use
+- **Solution**: Kill the process using the port or change the port in `.env` file
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **[Hugging Face](https://huggingface.co/)** - Transformer models and tokenizers
+- **[Google Gemini](https://deepmind.google/technologies/gemini/)** - Advanced AI model
+- **[React](https://reactjs.org/)** - Frontend framework
+- **[Material-UI](https://mui.com/)** - UI components
+- **[CodeMirror](https://codemirror.net/)** - Code editor
+- **[Flask](https://flask.palletsprojects.com/)** - Backend framework
+- **[Salesforce CodeGen](https://github.com/salesforce/CodeGen)** - Code generation model
+
+## 👨‍💻 Author
+
+**Piyush Raj Yadav**
+- GitHub: [@piyushrajyadav](https://github.com/piyushrajyadav)
+
+## ⭐ Show Your Support
+
+Give a ⭐️ if this project helped you!
+
+---
+
+**Made with ❤️ and AI**

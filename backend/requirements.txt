@@ -1,0 +1,18 @@
+flask==2.2.3
+werkzeug==2.2.3
+flask-cors==3.0.10
+astor==0.8.1
+astunparse==1.6.3
+# Use latest versions that are compatible with your Python
+torch>=1.13.0
+torchvision>=0.14.0
+transformers>=4.26.0
+numpy>=1.22.0
+scikit-learn>=1.0.2
+datasets>=2.8.0
+# Pre-built sentencepiece is recommended
+sentencepiece>=0.1.97
+# Additional dependencies that might be needed
+Pillow>=9.0.0
+tqdm>=4.64.0
+huggingface-hub>=0.13.0 
