@@ -7,8 +7,8 @@
 
 An intelligent code analysis tool that helps developers understand code functionality through detailed explanations. Supports both traditional rule-based analysis and cutting-edge AI/NLP-based analysis using transformer models.
 
-![Code Explainer Demo](<img width="2833" height="1523" alt="image" src="https://github.com/user-attachments/assets/6d40d4ad-af2c-4257-90a4-65162bc68aa1" />
-)
+<img width="2833" height="1523" alt="image" src="https://github.com/user-attachments/assets/6d40d4ad-af2c-4257-90a4-65162bc68aa1" />
+
 
 ## ✨ Features
 
