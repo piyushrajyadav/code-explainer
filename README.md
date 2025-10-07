@@ -284,7 +284,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Developer 
 
 **Piyush  Yadav**
-- GitHub: [@piyushrajyadav](https://piyushyadav.me)
+[piyush yadav](https://piyushyadav.me)
+
 ## ⭐ Show Your Support
 
 Give a ⭐️ if this project helped you!
