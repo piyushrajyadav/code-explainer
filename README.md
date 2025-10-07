@@ -281,15 +281,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **[Flask](https://flask.palletsprojects.com/)** - Backend framework
 - **[Salesforce CodeGen](https://github.com/salesforce/CodeGen)** - Code generation model
 
-## 👨‍💻 Author
+## 👨‍💻 Developer 
 
-**Piyush Raj Yadav**
-- GitHub: [@piyushrajyadav](https://github.com/piyushrajyadav)
-
+**Piyush  Yadav**
+- GitHub: [@piyushrajyadav](https://piyushyadav.me)
 ## ⭐ Show Your Support
 
 Give a ⭐️ if this project helped you!
 
 ---
-
-**Made with ❤️ and AI**
