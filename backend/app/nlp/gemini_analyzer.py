@@ -16,7 +16,7 @@ class GeminiCodeAnalyzer:
     
     def __init__(self, api_key: str = None):
         """Initialize the Gemini analyzer with API key."""
-        self.api_key = api_key or "AIzaSyCFir-anpMNbPOFqoxUMJveLSI0JWSuWyc"
+        self.api_key = GEMINI_API_KEY
         genai.configure(api_key=self.api_key)
         
         # Use Gemini Flash model - lighter and more cost-effective
