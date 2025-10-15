@@ -14,7 +14,7 @@ authors:
     orcid: 0009-0004-9734-2361
     affiliation: 1
 affiliations:
-  - name: Department of Computer Science, Institute of Engineering and Management
+  - name: Department of Computer Science and Engineering, Institute of Engineering and Management
     index: 1
 date: 15 October 2025
 bibliography: paper.bib
